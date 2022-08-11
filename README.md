@@ -1,2 +1,2 @@
 # Inception
-Docker, Docker-compose, Nginx, Mariadb, WordPress
+Makefile, Docker-compose, Docker, Nginx, Mariadb, WordPress
