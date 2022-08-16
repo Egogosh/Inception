@@ -1,7 +1,7 @@
 FROM debian:buster
 
 RUN apt update
-RUN apt install -y vsftpd
+RUN apt-get update --fix-missing && apt install -y vsftpd
 
 COPY conf/vsftpd.conf /var/www/vsftpd.conf
 COPY tools/configure.sh /var/www/configure.sh

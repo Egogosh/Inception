@@ -3,7 +3,7 @@ FROM debian:buster
 
 # выполняет команду и создаёт слой образа. Используется для установки в контейнер пакетов
 RUN apt update
-RUN apt install -y mariadb-server
+RUN apt-get update --fix-missing && apt install -y mariadb-server
 
 # копирует в контейнер файлы и папки
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
