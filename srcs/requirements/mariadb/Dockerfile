@@ -7,6 +7,7 @@ RUN apt-get update --fix-missing && apt install -y mariadb-server
 
 # копирует в контейнер файлы и папки
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/
+RUN chmod 444 /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY ./tools /var/www/
 
 # указывает на необходимость открыть порт
