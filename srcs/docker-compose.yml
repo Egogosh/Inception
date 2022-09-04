@@ -34,6 +34,13 @@ services:
       - wordpress
     ports:
       - "443:443"
+  
+  varnish:
+    build: ./varnish
+    ports:
+      - 80:80
+    depends_on:
+      - nginx
 
   redis:
     build: requirements/bonus/redis
