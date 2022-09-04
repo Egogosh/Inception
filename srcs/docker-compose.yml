@@ -38,7 +38,7 @@ services:
   varnish:
     build: ./varnish
     ports:
-      - 80:80
+      - 81:81
     depends_on:
       - nginx
 
