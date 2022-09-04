@@ -58,19 +58,6 @@ services:
     environment:
       FTP_USR: ${FTP_USR}
       FTP_PWD: ${FTP_PWD}
-
-  portainer:
-    image: portainer/portainer-ce:latest
-    container_name: portainer
-    ports:
-      - "8000:8000"
-      - "9443:9443"
-    volumes:
-      - "/etc/localtime:/etc/localtime:ro"
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    security_opt:
-      - no-new-privileges:true
-    restart: always
   
   adminer:
     image: adminer:4
